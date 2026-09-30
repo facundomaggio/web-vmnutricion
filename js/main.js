@@ -79,3 +79,44 @@ if ('ResizeObserver' in window) {
   secciones.forEach(function (seccion) { observadorTamano.observe(seccion); });
 }
 medirPagina();
+// Giro manual: los enlaces conservan su acción, incluso sus iconos internos.
+const libroPortada = document.querySelector('.portada-libro');
+if (libroPortada) {
+  const frente = libroPortada.querySelector('.portada-frente');
+  const reverso = libroPortada.querySelector('.portada-reverso');
+  const abrirPerfil = frente.querySelector('.portada-girar');
+  const volverPortada = reverso.querySelector('.portada-volver');
+  let perfilVisible = false;
+
+  function girarPortada(mostrarPerfil) {
+    perfilVisible = mostrarPerfil;
+    libroPortada.classList.toggle('girada', mostrarPerfil);
+    frente.inert = mostrarPerfil;
+    reverso.inert = !mostrarPerfil;
+    const destino = mostrarPerfil ? volverPortada : abrirPerfil;
+    (mostrarPerfil ? reverso : frente).setAttribute('aria-hidden', 'false');
+    destino.focus({ preventScroll: true });
+    frente.setAttribute('aria-hidden', String(mostrarPerfil));
+    reverso.setAttribute('aria-hidden', String(!mostrarPerfil));
+  }
+
+  reverso.hidden = false;
+  abrirPerfil.hidden = false;
+  reverso.inert = true;
+  reverso.setAttribute('aria-hidden', 'true');
+  libroPortada.classList.add('lista');
+  abrirPerfil.addEventListener('click', function () { girarPortada(true); });
+  volverPortada.addEventListener('click', function () { girarPortada(false); });
+  libroPortada.addEventListener('click', function (evento) {
+    if (evento.target.closest('a, button, input, select, textarea, label')) return;
+    // Seleccionar texto para copiarlo no debe girar el panel.
+    if (window.getSelection()?.toString()) return;
+    girarPortada(!perfilVisible);
+  });
+  libroPortada.addEventListener('keydown', function (evento) {
+    if (evento.key === 'Escape' && perfilVisible) {
+      evento.preventDefault();
+      girarPortada(false);
+    }
+  });
+}

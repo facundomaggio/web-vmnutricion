@@ -34,7 +34,8 @@
     <!-- Agrego portada de fondo-->
     <section class="portada" id="inicio" aria-labelledby="titulo-principal">
       <div class="contenedor">
-        <div class="portada-panel">
+        <div class="portada-libro">
+        <div class="portada-panel portada-frente">
           <p class="etiqueta">Lic. en Nutrición · USAL · Antropometría ISAK II</p>
           <h1 id="titulo-principal">Llevá tu rendimiento al <span>siguiente nivel.</span></h1>
           <p class="portada-descripcion">Planes de nutrición deportiva personalizados y evaluación antropométrica ISAK II. Atención presencial en Areco Golf y consultoría online para acompañar tus objetivos.</p>
@@ -48,6 +49,17 @@
             <li>Presencial y online</li>
             <li>Seguimiento personalizado</li>
           </ul>
+          <button class="portada-girar" type="button" aria-controls="portada-perfil" hidden>Conocé a Valentín <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="portada-panel portada-reverso" id="portada-perfil" hidden>
+          <img class="portada-retrato" src="assets/img/FotoCliente.png" alt="Retrato de Valentín Massaroni" width="400" height="412">
+          <p class="etiqueta">Detrás de tu acompañamiento</p>
+          <h2>Valentín Massaroni</h2>
+          <p class="portada-descripcion">Licenciado en Nutrición · USAL<br>Antropometrista ISAK Nivel II</p>
+          <p class="portada-perfil-detalle">Nutrición deportiva y seguimiento personalizado. Atención presencial y online.</p>
+          <a class="boton boton-naranja" href="#sobre-valentin">¿Quién soy? <span aria-hidden="true">↗</span></a>
+          <button class="portada-volver portada-girar" type="button">Volver a la portada <span aria-hidden="true">↶</span></button>
+        </div>
         </div>
       </div>
     </section>

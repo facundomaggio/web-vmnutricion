@@ -200,3 +200,30 @@ main { color: var(--blanco); }
 @supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
   .pilares-lista > div { background: #14213be6; }
 }
+/* 11. Portada de dos caras. Comparten celda para evitar saltos de altura. */
+.portada-libro { max-width: 700px; position: relative; isolation: isolate; perspective: 1600px; transition: transform 260ms ease; }
+.portada-libro.lista { display: grid; cursor: pointer; }
+.portada-libro.lista::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 28px; background: #b9c6dd; border: 1px solid #ffffff66; opacity: 0; transform: translate(0, 0) rotate(0); transition: transform 260ms ease, opacity 260ms ease; pointer-events: none; }
+.portada-libro.lista .portada-panel { grid-area: 1 / 1; min-width: 0; width: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform 650ms cubic-bezier(.2,.7,.2,1), visibility 650ms; }
+.portada-libro.lista .portada-frente { transform: rotateY(0); }
+.portada-libro.lista .portada-reverso { transform: rotateY(-180deg); visibility: hidden; pointer-events: none; }
+.portada-libro.girada .portada-frente { transform: rotateY(180deg); visibility: hidden; pointer-events: none; }
+.portada-libro.girada .portada-reverso { transform: rotateY(0); visibility: visible; pointer-events: auto; }
+.portada-girar { display: flex; align-items: center; gap: 12px; padding: 10px 0; margin-top: 22px; border: 0; background: transparent; color: #ffd2af; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; text-align: left; }
+.portada-girar[hidden], .portada-panel[hidden] { display: none; }
+.portada-girar:hover { text-decoration: underline; text-underline-offset: 5px; }
+.portada-retrato { width: 100%; height: clamp(210px, 24vw, 280px); object-fit: cover; object-position: center 25%; border-radius: 18px; margin-bottom: 26px; }
+.portada-reverso h2 { font-size: clamp(30px, 3.5vw, 42px); }
+.portada-perfil-detalle { font-size: 14px; color: #e5eaf3; }
+.portada-libro.lista:focus-within::before { opacity: .85; transform: translate(8px, 9px) rotate(1deg); }
+@media (hover: hover) and (pointer: fine) {
+  .portada-libro.lista:hover { transform: scale(1.018); }
+  .portada-libro.lista:hover::before { opacity: .85; transform: translate(10px, 10px) rotate(1.2deg); }
+}
+@media (hover: none) {
+  .portada-libro.lista::before { opacity: .65; transform: translate(5px, 6px) rotate(.5deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portada-libro, .portada-libro.lista::before, .portada-libro.lista .portada-panel { transition: none; }
+  .portada-libro.lista:hover { transform: none; }
+}
