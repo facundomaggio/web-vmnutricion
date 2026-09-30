@@ -51,7 +51,7 @@ section, article { scroll-margin-top: 25px; }
 .navegacion > .boton { border-radius: 40px; }
 
 /* 4. Portada. La foto de referencia se complementa con un fondo azul. */
-.portada { min-height: 860px; min-height: 100vh; display: flex; align-items: center; padding: 175px 0 80px; color: white; background-color: var(--azul-principal); background-image: linear-gradient(90deg, #14213bd9, #253c6d66), url("../assets/img/portada-referencia.jpg"); background-size: cover; background-position: center; }
+.portada { min-height: calc(100svh - 40px); display: flex; align-items: center; padding: var(--alto-nav, 155px) 0 24px; color: white; background-color: var(--azul-principal); background-image: linear-gradient(90deg, #14213bd9, #253c6d66), url("../assets/img/portada-referencia.jpg"); background-size: cover; background-position: center; }
 .portada-panel { max-width: 700px; padding: 46px; border: 1px solid #ffffff33; border-radius: 28px; background: #172641db; box-shadow: 0 25px 60px #00000026; }
 .portada .etiqueta { color: #ffd2af; font-size: 11px; }
 .portada h1 span { color: var(--naranja); }
@@ -110,7 +110,7 @@ section, article { scroll-margin-top: 25px; }
 @media (max-width: 1050px) {
   .navegacion { flex-wrap: wrap; border-radius: 26px; }
   .menu { order: 3; width: 100%; justify-content: center; padding-top: 12px; border-top: 1px solid #e5eaf3; }
-  .portada { padding-top: 210px; }
+
   .sobre-contenido { gap: 35px; }
 }
 @media (max-width: 700px) {
@@ -125,7 +125,7 @@ section, article { scroll-margin-top: 25px; }
   .marca img { width: 40px; height: 40px; }
   .navegacion > .boton { padding: 10px 13px; font-size: 11px; }
   .menu { gap: 18px; font-size: 11px; flex-wrap: wrap; }
-  .portada { padding: 190px 0 50px; }
+
   .portada-panel { padding: 28px 22px; }
   .acciones { flex-direction: column; }
   .pilares-lista, .tarjetas, .pasos, .sobre-contenido, .contacto-panel { grid-template-columns: 1fr; }
@@ -171,10 +171,10 @@ body:has(.certificado-modal[open]) { overflow: hidden; }
 main { color: var(--blanco); }
 .portada {
   margin: 12px;
-  min-height: calc(100svh - 24px);
+  min-height: calc(100svh - 40px);
   border-radius: 32px;
   overflow: hidden;
-  padding-top: max(175px, calc(var(--alto-nav, 155px) + 20px));
+  padding-top: var(--alto-nav, 155px);
 }
 .portada-panel {
   background: #14213bb3;
@@ -188,7 +188,7 @@ main { color: var(--blanco); }
 /* Los logos originales mantienen una superficie clara para ser legibles. */
 .certificaciones-logos { background: var(--blanco); border-radius: 22px; padding: 16px; }
 @media (max-width: 700px) {
-  .portada { margin: 8px; border-radius: 24px; min-height: calc(100svh - 16px); padding-top: max(190px, calc(var(--alto-nav, 170px) + 20px)); }
+  .portada { margin: 8px; border-radius: 24px; min-height: calc(100svh - 32px); padding-top: var(--alto-nav, 170px); }
   .portada-panel { background: #14213bcc; backdrop-filter: none; }
   .certificaciones-logos { padding: 10px; }
 }
