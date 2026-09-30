@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lic. Valentín Massaroni | Nutrición Deportiva &amp; Antropometría ISAK II</title>
+<!-- Favicon / Meta description -->
+<meta content="Nutrición deportiva basada en evidencia y antropometría ISAK Nivel II. Atención presencial en Areco Golf y online para deportistas. Lic. Valentín Massaroni (USAL)." name="description"/>
+<!-- Google Fonts: Inter & Outfit -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f4fc',
+              100: '#e1e9f8',
+              200: '#c5d5f2',
+              300: '#9cb9e9',
+              400: '#6995dc',
+              500: '#4674cc',
+              600: '#3259b3',
+              primary: '#253C6D', // Color de referencia azul marino
+              dark: '#182748',
+              accent: '#38bdf8',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderRadius: {
+            'pill': '9999px',
+            '3xl': '1.75rem',
+            '4xl': '2.25rem',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+  </style>
+<style data-purpose="glass-and-ui">
+    /* Glassmorphism panel as seen in reference image 1 */
+    .hero-glass-card {
+      background: rgba(14, 23, 42, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+    }
+    .header-pill-shadow {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-primary selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 w-full z-50 pt-4 px-4 sm:px-6 lg:px-8 transition-all duration-300" id="main-navbar">
+<div class="max-w-7xl mx-auto">
+<!-- Reference-style floating pill navbar inspired by Trabajos Gastro -->
+<nav aria-label="Navegación principal" class="bg-white/95 backdrop-blur-md header-pill-shadow rounded-full py-2.5 px-4 sm:px-6 border border-slate-100 flex items-center justify-between transition-all duration-300">
+<!-- Left: Brand Logo & Title -->
+<a aria-label="Inicio Valentín Massaroni" class="flex items-center gap-3 group focus:outline-none" href="#">
+<div class="relative w-11 h-11 rounded-full overflow-hidden border border-brand-primary/20 shadow-sm flex-shrink-0 bg-slate-900 group-hover:scale-105 transition-transform duration-200">
+<img alt="Logo VM Nutrición Deportiva" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz-eyttFjyuovQuCgBcM1Fl0CqTXcW5oOYwCQRNv__R2zahVODMO6Q2pR33NAWVsebSMNuPM-QE23ZNj5znJ8LbFypt0Awb-LRkUoEFH3LrgT3EAaJCbLxT7ZhOeS60bjCEVmlyIDdennHWJlow4dgXABMHOwzNivA3MtcpItm6f6XSv121LhcdFPBD8xXpHfjE1o7r7WG559TBWjallpyDVqkAH36za6NnRV_hnJL9ygIRgQ6zqDy"/>
+</div>
+<div class="flex flex-col">
+<span class="text-brand-primary font-heading font-extrabold text-lg sm:text-xl tracking-tight leading-tight group-hover:text-brand-dark transition-colors">
+              VALENTÍN MASSARONI
+            </span>
+<span class="text-[10px] sm:text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
+              Nutrición &amp; Antropometría ISAK II
+            </span>
+</div>
+</a>
+<!-- Center: Desktop Navigation Links -->
+<div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+<a class="hover:text-brand-primary transition-colors py-1" href="#servicios">Nutrición Deportiva</a>
+<a class="hover:text-brand-primary transition-colors py-1" href="#antropometria">Antropometría ISAK II</a>
+<a class="hover:text-brand-primary transition-colors py-1" href="#planes">Planes &amp; Citas</a>
+<a class="hover:text-brand-primary transition-colors py-1" href="#sobre-valentin">Sobre Valentín</a>
+<a class="hover:text-brand-primary transition-colors py-1 flex items-center gap-1.5 text-slate-600" href="#sede">
+<i class="fa-solid fa-location-dot text-brand-primary text-xs"></i> Areco Golf
+          </a>
+</div>
+<!-- Right: Action Button (Identical in style to the pill Login button in Trabajos Gastro) -->
+<div class="flex items-center gap-2.5">
+<a class="bg-brand-primary hover:bg-brand-dark text-white text-xs sm:text-sm font-semibold py-2.5 px-5 sm:px-6 rounded-full flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 focus:ring-2 focus:ring-brand-primary/40 focus:outline-none" href="https://wa.me/5491100000000?text=Hola%20Lic.%20Valent%C3%ADn%20Massaroni,%20quiero%20solicitar%20un%20turno%20para%20consulta." rel="noopener noreferrer" target="_blank">
+<i class="fa-regular fa-calendar-check text-xs"></i>
+<span>Reservar Turno</span>
+</a>
+<!-- Mobile Hamburger Toggle -->
+<button aria-label="Abrir menú" class="lg:hidden p-2 rounded-full text-slate-600 hover:text-brand-primary hover:bg-slate-100 transition-colors focus:outline-none" id="mobile-menu-button" type="button">
+<i class="fa-solid fa-bars text-lg"></i>
+</button>
+</div>
+</nav>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden lg:hidden mt-2 bg-white rounded-3xl p-5 shadow-xl border border-slate-100 space-y-3" id="mobile-menu">
+<a class="block text-slate-700 font-semibold text-sm hover:text-brand-primary py-1.5" href="#servicios">Nutrición Deportiva</a>
+<a class="block text-slate-700 font-semibold text-sm hover:text-brand-primary py-1.5" href="#antropometria">Antropometría ISAK II</a>
+<a class="block text-slate-700 font-semibold text-sm hover:text-brand-primary py-1.5" href="#planes">Planes &amp; Citas</a>
+<a class="block text-slate-700 font-semibold text-sm hover:text-brand-primary py-1.5" href="#sobre-valentin">Sobre Valentín</a>
+<a class="block text-slate-700 font-semibold text-sm hover:text-brand-primary py-1.5" href="#sede">Sede Areco Golf</a>
+<div class="pt-3 border-t border-slate-100">
+<div class="text-xs text-slate-500 mb-2">Matrículas Profesionales: MN 14.321 · MP 8.634</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" data-purpose="hero-section">
+<!-- Cinematic Dark Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Laboratorio de alto rendimiento deportivo y cineantropometría" class="w-full h-full object-cover object-center transform scale-105 filter brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD95AaOnKpklWHhXiyyYHsOMW1WngxY-xdrC_w6FSiLZSuRgzRpaeTmyq8If5qh2xc09F5lz0Ch_GlDkwFhuykcMjS5Wt6UnXHMz-b1j6XB782S3eJJIXItJs9n34zUAjps3z2_62Prx7aEizBdGaW9udHDwVM2N52gvRzgA-L5F7JeWmBztBclHxaE5TlNYbGGDEG0NeGiT3Dokw9drHXtC5TU-jxLt-s5Qyv4-5DJpX6sKEn5qm5P"/>
+<!-- Deep subtle gradient for text readability and cinematic depth -->
+<div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/60 to-slate-950/40"></div>
+<div class="absolute inset-0 bg-brand-dark/30 mix-blend-multiply"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 max-w-7xl w-full mx-auto flex items-center">
+<!-- Floating Glass Card (Exact layout & aesthetic from Reference Image 1) -->
+<div class="w-full max-w-2xl hero-glass-card rounded-3xl p-6 sm:p-9 lg:p-11 text-white border border-white/15">
+<!-- Top Tagline / Category Badge -->
+<div class="flex items-center gap-2 mb-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-white/10 text-cyan-200 border border-white/10">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-2 animate-pulse"></span>
+            Lic. en Nutrición Deportiva (USAL) &amp; Cineantropometría ISAK II
+          </span>
+</div>
+<!-- Main Energetic Headline -->
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight leading-[1.15] text-white mb-5">
+          Llevá tu Rendimiento y Composición Corporal al <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-200">Siguiente Nivel</span>
+</h1>
+<!-- Explanatory Narrative -->
+<p class="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 font-normal">
+          Planes de nutrición deportiva personalizados, valoración antropométrica ISAK II con instrumental de precisión y periodización para atletas. Atención presencial en <strong class="text-white font-semibold">Areco Golf</strong> y consultoría online para todo el país.
+        </p>
+<!-- Twin Action Buttons (Styled like Reference Image 1) -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+<!-- Primary CTA (Solid Dark with White Border) -->
+<a class="inline-flex justify-center items-center px-6 py-3.5 rounded-2xl bg-black/70 hover:bg-black text-white text-sm font-semibold border border-white/25 hover:border-white/50 transition-all duration-200 shadow-lg group text-center" href="#antropometria">
+<span>Solicitar Medición ISAK</span>
+<i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+</a>
+<!-- Secondary CTA (Bright White Pill) -->
+<a class="inline-flex justify-center items-center px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 text-sm font-bold shadow-md hover:shadow-xl transition-all duration-200 text-center" href="#servicios">
+<span>Planes Nutricionales</span>
+</a>
+</div>
+<!-- Trust Badges Under Buttons -->
+<div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-300 font-medium">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-award text-sky-300"></i>
+<span>MN 14.321 | MP 8.634</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-location-dot text-sky-300"></i>
+<span>San Antonio de Areco</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-laptop text-sky-300"></i>
+<span>Modalidad Presencial &amp; Online</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: TrustBarSection -->
+<!-- Blue Banner inspired by the "Nos Podés Ver En" section in Reference Image 2 -->
+<section class="bg-brand-primary text-white py-14 px-4 sm:px-6 lg:px-8 border-y border-brand-dark/30 shadow-inner" data-purpose="credentials-trust-bar">
+<div class="max-w-7xl mx-auto text-center">
+<!-- Section Label -->
+<h2 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-sky-200 mb-8 font-heading">
+        Formación, Certificaciones y Sedes de Prestigio
+      </h2>
+<!-- Institution Grid / Badges -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-center">
+<!-- Credential 1: USAL -->
+<div class="bg-white/10 hover:bg-white/15 transition-all duration-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/10 group">
+<div class="w-12 h-12 mb-3 rounded-full bg-white/20 flex items-center justify-center text-sky-200 text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<span class="font-heading font-bold text-base tracking-wide text-white">USAL</span>
+<span class="text-xs text-slate-200 mt-1">Lic. en Nutrición</span>
+<span class="text-[11px] text-sky-300 font-mono mt-0.5">Univ. del Salvador</span>
+</div>
+<!-- Credential 2: ISAK GLOBAL -->
+<div class="bg-white/10 hover:bg-white/15 transition-all duration-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/10 group">
+<div class="w-12 h-12 mb-3 rounded-full bg-white/20 flex items-center justify-center text-sky-200 text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-ruler-combined"></i>
+</div>
+<span class="font-heading font-bold text-base tracking-wide text-white">ISAK GLOBAL</span>
+<span class="text-xs text-slate-200 mt-1">Cineantropometría</span>
+<span class="text-[11px] text-sky-300 font-semibold mt-0.5">Certificación Nivel II</span>
+</div>
+<!-- Credential 3: ANTRO SPORT -->
+<div class="bg-white/10 hover:bg-white/15 transition-all duration-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/10 group">
+<div class="w-12 h-12 mb-3 rounded-full bg-white/20 flex items-center justify-center text-sky-200 text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+<span class="font-heading font-bold text-base tracking-wide text-white">ANTRO SPORT</span>
+<span class="text-xs text-slate-200 mt-1">Evaluación Corporal</span>
+<span class="text-[11px] text-sky-300 mt-0.5">Comunidad Científica</span>
+</div>
+<!-- Credential 4: AAT TENIS -->
+<div class="bg-white/10 hover:bg-white/15 transition-all duration-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/10 group">
+<div class="w-12 h-12 mb-3 rounded-full bg-white/20 flex items-center justify-center text-sky-200 text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-baseball-bat-ball"></i>
+</div>
+<span class="font-heading font-bold text-base tracking-wide text-white">AAT</span>
+<span class="text-xs text-slate-200 mt-1">Profesor Oficial</span>
+<span class="text-[11px] text-sky-300 mt-0.5">Asoc. Argentina de Tenis</span>
+</div>
+<!-- Credential 5: ARECO GOLF -->
+<div class="col-span-2 md:col-span-1 bg-white/10 hover:bg-white/15 transition-all duration-200 rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-white/10 group">
+<div class="w-12 h-12 mb-3 rounded-full bg-white/20 flex items-center justify-center text-sky-200 text-xl group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-golf-ball-tee"></i>
+</div>
+<span class="font-heading font-bold text-base tracking-wide text-white">ARECO GOLF</span>
+<span class="text-xs text-slate-200 mt-1">Sede Consultorio</span>
+<span class="text-[11px] text-sky-300 mt-0.5">San Antonio de Areco</span>
+</div>
+</div>
+<!-- Legal Professional License Registry -->
+<div class="mt-8 flex items-center justify-center gap-4 text-xs tracking-wider text-sky-200 font-mono">
+<span class="inline-flex items-center gap-1.5 bg-brand-dark/40 px-4 py-1.5 rounded-full border border-white/10">
+<i class="fa-solid fa-id-card"></i> MATRÍCULA NACIONAL: MN 14.321
+        </span>
+<span class="inline-flex items-center gap-1.5 bg-brand-dark/40 px-4 py-1.5 rounded-full border border-white/10">
+<i class="fa-solid fa-certificate"></i> MATRÍCULA PROVINCIAL: MP 8.634
+        </span>
+</div>
+</div>
+</section>
+<!-- END: TrustBarSection -->
+<!-- BEGIN: HowItWorksTwoPaths -->
+<!-- Inspired by "¿Cómo funciona? / Contratá Empleados vs Busco Trabajo" split cards in Reference Image 2 -->
+<section class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 relative overflow-hidden" data-purpose="two-paths-section" id="servicios">
+<!-- Background subtle ambient lighting -->
+<div class="absolute -top-40 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-4">
+          ¿Cómo Funciona?
+        </h2>
+<p class="text-slate-300 text-base sm:text-lg">
+          Elegí el abordaje ideal según tus metas deportivas, competitivas o de salud física.
+        </p>
+</div>
+<!-- Two Paths Grid (Light Card & Dark Slate Card) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- PATH 1: Antropometría ISAK II (Fondo Blanco Claro) -->
+<div class="bg-white rounded-4xl p-8 sm:p-10 shadow-2xl flex flex-col justify-between border border-slate-100 relative overflow-hidden group" id="antropometria">
+<div>
+<!-- Image Thumbnail / Visual Header -->
+<div class="w-full h-56 rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Medición cineantropométrica con caliper ISAK" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnEa5Y9DmSZuuuPkLapAE8tOKyvKWQAhL9gMCUXQT_cSNzUGVoH4yETifZOqsqyRLMoQYFaTIaphq87mis7cbxO5R8ce87nfvZEFLEvlVpGQD6x9a7MxCHz6-0X-SXNqo3ehr313NAWdusgXMA9-9cUOciV27KsFWdhu14qSkAvZSZ2PbmgCeRUwZr-c9w_e5UZyCKz4gI80KvGpCfn0MTCvxHANW1DNthlw221qUiPdQ83zERPIGa"/>
+<span class="absolute top-3 left-3 bg-brand-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
+                Presencial en Areco Golf
+              </span>
+</div>
+<!-- Title & Subtitle -->
+<h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 mb-2">
+              Antropometría ISAK II
+            </h3>
+<p class="text-slate-600 font-medium text-sm mb-6">
+              Protocolo internacional con instrumental científico homologado.
+            </p>
+<!-- Features List with Checkmarks -->
+<ul class="space-y-3 mb-8 text-sm text-slate-700">
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-brand-primary mt-1 flex-shrink-0"></i>
+<span><strong>Fraccionamiento en 5 componentes:</strong> Masa muscular, masa adiposa, ósea, residual y de la piel con precisión milimétrica.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-brand-primary mt-1 flex-shrink-0"></i>
+<span><strong>Somatocarta individual:</strong> Identificación exacta del biotipo (endomorfia, mesomorfia, ectomorfia) para el deporte específico.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-brand-primary mt-1 flex-shrink-0"></i>
+<span><strong>Informe detallado instantáneo:</strong> Comparación con base de datos de deportistas de élite y metas de ganancia magra o descenso adiposo.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-brand-primary mt-1 flex-shrink-0"></i>
+<span>Instrumental calibrado de estándar mundial (caliper de pliegues, segmómetro, cinta lufkin).</span>
+</li>
+</ul>
+</div>
+<!-- Action Button / Link -->
+<div class="pt-4 border-t border-slate-100">
+<a class="w-full bg-slate-900 hover:bg-brand-primary text-white py-4 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-between transition-colors duration-200" href="https://wa.me/5491100000000?text=Hola%20Lic.%20Valent%C3%ADn%20Massaroni,%20quiero%20agendar%20una%20medici%C3%B3n%20antropom%C3%A9trica%20ISAK%20II%20en%20Areco%20Golf." rel="noopener noreferrer" target="_blank">
+<span>Agendar Medición ISAK en Areco</span>
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- PATH 2: Plan Nutricional Deportivo (Fondo Azul Marino / Pizarra) -->
+<div class="bg-gradient-to-br from-brand-primary to-brand-dark text-white rounded-4xl p-8 sm:p-10 shadow-2xl flex flex-col justify-between border border-brand-400/20 relative overflow-hidden group" id="planes">
+<div>
+<!-- Image Thumbnail / Visual Header -->
+<div class="w-full h-56 rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Rendimiento deportivo y nutrición en competencia de tenis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Cxv6z95z6vxkgwSDP6jPXkneHi82QlPN6Q33G4LEKJL_sNeNGbvmikKSlnQUNJrCJqZI5HL1jes4ycuhDPulxorZOiD4ALLTbaB9mz2QlbsAliekE1wzgPW0Jt6nYZEkhM8TNy0FmMyld1SctwNBbyZGDWofmjhHCEn_0GHMh7Rx3H5yZRSdVHsBrzhZIT95XChg_h8c4mWIqX9OU9Y4bYu5R9j32svMC2iuRC5YCD7G02hL3Hqc"/>
+<span class="absolute top-3 left-3 bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow">
+                Modalidad Presencial &amp; Online
+              </span>
+</div>
+<!-- Title & Subtitle -->
+<h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white mb-2">
+              Plan Nutricional Deportivo
+            </h3>
+<p class="text-sky-200 font-medium text-sm mb-6">
+              Estrategia personalizada y periodizada según el ciclo competitivo y de entrenamiento.
+            </p>
+<!-- Features List with Checkmarks -->
+<ul class="space-y-3 mb-8 text-sm text-slate-200">
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-sky-400 mt-1 flex-shrink-0"></i>
+<span><strong>Periodización nutricional:</strong> Distribución calórica y de carbohidratos ajustada a la carga de entrenamiento (días fuertes, suaves y descanso).</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-sky-400 mt-1 flex-shrink-0"></i>
+<span><strong>Nutrición intra-competencia:</strong> Timing de comidas pre, intra y post partido o carrera, geles, sales y protocolos de rehidratación.</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-sky-400 mt-1 flex-shrink-0"></i>
+<span><strong>Suplementación basada en evidencia:</strong> Recomendaciones seguras bajo directrices del Instituto Australiano del Deporte (AIS).</span>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-solid fa-circle-check text-sky-400 mt-1 flex-shrink-0"></i>
+<span>Seguimiento activo y resolución de dudas directas vía WhatsApp entre consultas.</span>
+</li>
+</ul>
+</div>
+<!-- Action Button / Link -->
+<div class="pt-4 border-t border-white/10">
+<a class="w-full bg-white hover:bg-sky-50 text-slate-900 py-4 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-between transition-colors duration-200" href="https://wa.me/5491100000000?text=Hola%20Lic.%20Valent%C3%ADn%20Massaroni,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20planes%20de%20nutrici%C3%B3n%20deportiva." rel="noopener noreferrer" target="_blank">
+<span>Comenzar mi Plan Nutricional</span>
+<i class="fa-solid fa-arrow-right text-brand-primary"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowItWorksTwoPaths -->
+<!-- BEGIN: AboutSection -->
+<section class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden" data-purpose="biography-section" id="sobre-valentin">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Photo & Credentials Badge Column -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md lg:max-w-none">
+<!-- Frame Container -->
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-slate-900">
+<img alt="Lic. Valentín Massaroni aplicando protocolo de medición antropométrica" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANjFbv5CIcOK7O6d75JwgJeADeId8L5I5dC2znHB2ginAgNzQYmA4OL2TmnfayyzACTny_WBO3lpDyz8c3bGZ_lDlhniYutoBWxUE4sCDoPi0kaaoqbfvGH39MKJMidZe5-agdujgiP_NSOtiaq675q5plmzp3r8w_65U-N9HItWFWYLWuc4rxCE6xTybMJkmHqDhtGKXA4JV40ZoLxqyZnrAyuQtkfnE8e2EaxL98RVl5VWYkn2FF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+<!-- Bottom caption on image -->
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<span class="text-xs uppercase tracking-widest text-sky-300 font-semibold">Lic. en Nutrición</span>
+<p class="font-heading font-bold text-xl">Valentín Massaroni</p>
+<p class="text-xs text-slate-300">MN 14.321 | MP 8.634</p>
+</div>
+</div>
+<!-- Floating Badge: Areco Golf & AAT -->
+<div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 max-w-[220px]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+<i class="fa-solid fa-medal text-lg"></i>
+</div>
+<div>
+<div class="text-xs font-extrabold text-slate-900">Profesor AAT</div>
+<div class="text-[11px] text-slate-500 leading-tight">Asoc. Argentina de Tenis</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Text Story Column -->
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-primary text-xs font-bold uppercase tracking-wider mb-4">
+<i class="fa-solid fa-user-doctor"></i> Perfil Profesional
+          </div>
+<h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 mb-6 leading-tight">
+            Ciencia aplicada al entrenamiento, precisión cineantropométrica y pasión por el deporte
+          </h2>
+<div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+<p>
+              Soy <strong>Valentín Massaroni</strong>, graduado como <strong>Licenciado en Nutrición por la Universidad del Salvador (USAL)</strong>, matriculado legalmente bajo <strong>MN 14.321</strong> y <strong>MP 8.634</strong>. Como profesional de la salud y profesor oficial de la <strong>Asociación Argentina de Tenis (AAT)</strong>, entiendo la exigencia atlética tanto desde el rigor científico como desde adentro de la cancha.
+            </p>
+<p>
+              Cuento con la certificación internacional de <strong>Antropometrista Nivel II por ISAK Global</strong> (<a class="text-brand-primary font-semibold hover:underline" href="#">@antro_sport</a> / <a class="text-brand-primary font-semibold hover:underline" href="#">@isakglobal</a>), lo que me permite realizar valoraciones fraccionadas de composición corporal con el más estricto rigor biomecánico.
+            </p>
+<p>
+              Mi propósito es desterrar las dietas genéricas y proporcionar a cada deportista —desde aficionados comprometidos hasta competidores de alto rendimiento— una periodización nutricional medible, flexible y orientada a resultados reales de fuerza, resistencia y estética funcional.
+            </p>
+</div>
+<!-- Highlight Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-200">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center flex-shrink-0 font-bold text-sm">
+                01
+              </div>
+<div>
+<h4 class="font-heading font-bold text-slate-900 text-sm">Basado en Ciencia</h4>
+<p class="text-xs text-slate-500 mt-0.5">Estrategias respaldadas por ensayos clínicos y consensos del deporte internacional.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center flex-shrink-0 font-bold text-sm">
+                02
+              </div>
+<div>
+<h4 class="font-heading font-bold text-slate-900 text-sm">Consultorio Areco Golf</h4>
+<p class="text-xs text-slate-500 mt-0.5">Espacio exclusivo para mediciones antropométricas presenciales y atención integral.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: LocationVenueSection -->
+<section class="py-16 bg-white border-t border-slate-200" data-purpose="venue-section" id="sede">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="relative z-10 max-w-xl">
+<div class="flex items-center gap-2 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+<i class="fa-solid fa-location-crosshairs"></i> Sede de Atención Presencial
+          </div>
+<h3 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-3">
+            Areco Golf Club
+          </h3>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            Ubicado en un entorno natural ideal para la práctica deportiva en San Antonio de Areco, Buenos Aires. Consultorio equipado con instrumental antropométrico de precisión y comodidades para tu evaluación integral.
+          </p>
+<div class="flex flex-wrap gap-4 text-xs font-medium text-slate-300">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-car text-sky-400"></i> Estacionamiento propio</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-sky-400"></i> Turnos programados</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> Privacidad y confort</span>
+</div>
+</div>
+<div class="relative z-10 flex-shrink-0">
+<a class="bg-brand-primary hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full inline-flex items-center gap-3 border border-white/20 shadow-xl hover:scale-105 transition-all text-sm sm:text-base" href="https://wa.me/5491100000000?text=Hola%20Lic.%20Valent%C3%ADn%20Massaroni,%20quiero%20coordinar%20un%20turno%20presencial%20en%20Areco%20Golf." rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+<span>Coordinar Turno en Areco</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: LocationVenueSection -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-900" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+<!-- Column 1: Brand & Logo -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-slate-700 bg-slate-900 flex-shrink-0">
+<img alt="Logo Valentín Massaroni Nutrición" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfkwZ-7DdCnjEhUaQ3dD79eEKQNvrQ5S2OAZVqPF2PrsAA7gUaJTX8Mkt8Xn7UpPDv8TU2GC40wdJ_lh06UjTZMZsfNSL6Nsx9OYia8b1W01KpPExM2UNkbFGdTTLs1ew_XgxGCjFbL67ae6wDIwZhaOIgulWkAxsY8Ul5ZgvKFHQlAF6ArSa_c9ejox2-tJ6t4W4AFmPLUwKMa6aK6MgfdPiCQlRlsyGWEYavsqFXdwSXFMFBeQdy"/>
+</div>
+<div>
+<div class="font-heading font-extrabold text-white text-base tracking-tight">VALENTÍN MASSARONI</div>
+<div class="text-[11px] text-sky-400 font-semibold tracking-wider uppercase">Nutrición Deportiva</div>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">
+            Planes nutricionales personalizados, periodización para competencia y evaluación cineantropométrica ISAK II en San Antonio de Areco y online.
+          </p>
+<div class="text-xs text-slate-400">
+<div class="font-mono text-slate-300">MN 14.321 | MP 8.634</div>
+<div class="text-slate-400 text-[11px]">Licenciado en Nutrición (USAL)</div>
+</div>
+</div>
+<!-- Column 2: Navigation Links -->
+<div>
+<h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Navegación</h4>
+<ul class="space-y-2.5 text-xs">
+<li><a class="hover:text-white transition-colors" href="#servicios">Planes Nutricionales Deportivos</a></li>
+<li><a class="hover:text-white transition-colors" href="#antropometria">Antropometría ISAK Nivel II</a></li>
+<li><a class="hover:text-white transition-colors" href="#sobre-valentin">Sobre Valentín Massaroni</a></li>
+<li><a class="hover:text-white transition-colors" href="#sede">Sede en Areco Golf</a></li>
+<li><a class="hover:text-white transition-colors" href="https://wa.me/5491100000000" target="_blank">Consultas Online</a></li>
+</ul>
+</div>
+<!-- Column 3: Certifications & Communities -->
+<div>
+<h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Certificaciones</h4>
+<ul class="space-y-2.5 text-xs text-slate-400">
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-check text-sky-400 text-xs"></i>
+<span>ISAK Global Nivel II (@isakglobal)</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-check text-sky-400 text-xs"></i>
+<span>Antro Sport (@antro_sport)</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-check text-sky-400 text-xs"></i>
+<span>Profesor Oficial Tenis (@aatenis)</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-check text-sky-400 text-xs"></i>
+<span>Universidad del Salvador (USAL)</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="fa-solid fa-check text-sky-400 text-xs"></i>
+<span>Areco Golf (@arecogolf)</span>
+</li>
+</ul>
+</div>
+<!-- Column 4: Contact & Schedule -->
+<div>
+<h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Atención &amp; Contacto</h4>
+<ul class="space-y-3 text-xs">
+<li class="flex items-center gap-2.5">
+<i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+<a class="hover:underline text-slate-200" href="https://wa.me/5491100000000" target="_blank">
+                +54 9 11 0000-0000 (Turnos)
+              </a>
+</li>
+<li class="flex items-center gap-2.5">
+<i class="fa-solid fa-location-dot text-brand-400 text-sm"></i>
+<span>Areco Golf, San Antonio de Areco</span>
+</li>
+<li class="flex items-center gap-2.5">
+<i class="fa-solid fa-globe text-sky-400 text-sm"></i>
+<span>Consultoría Online a todo el país</span>
+</li>
+</ul>
+<div class="mt-4 pt-3">
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary hover:bg-brand-600 text-white rounded-full text-xs font-semibold transition-colors" href="https://wa.me/5491100000000?text=Hola%20Lic.%20Valent%C3%ADn%20Massaroni,%20quiero%20iniciar%20mi%20consulta." target="_blank">
+<i class="fa-solid fa-calendar-days"></i>
+<span>Solicitar Turno Ahora</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Legal & Copyright -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+<div>
+          © <span id="current-year"></span> Lic. Valentín Massaroni. Todos los derechos reservados. Matrículas: MN 14.321 | MP 8.634.
+        </div>
+<div class="flex items-center gap-4">
+<span class="hover:text-slate-400">Nutrición basada en evidencia</span>
+<span>•</span>
+<span class="hover:text-slate-400">Areco Golf Club</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="ui-interactions">
+    // Set dynamic copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile navigation toggle
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu on link click
+      const links = mobileMenu.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Navbar scroll background enhancement
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('main-navbar');
+      if (window.scrollY > 40) {
+        navbar.classList.add('py-2');
+        navbar.classList.remove('pt-4');
+      } else {
+        navbar.classList.remove('py-2');
+        navbar.classList.add('pt-4');
+      }
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>
