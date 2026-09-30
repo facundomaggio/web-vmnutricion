@@ -232,3 +232,13 @@ main { color: var(--blanco); }
   .portada-libro, .portada-libro.lista::before, .portada-libro.lista .portada-frente, .portada-libro.lista .portada-frente::after { transition: none; }
   .portada-libro.lista:hover { transform: none; }
 }
+
+/* El ancla apunta al contenido, sin sumar el padding exterior de la sección.
+   El espacio para el nav lo calcula --alto-nav en scroll-padding-top. */
+#sobre-valentin { scroll-margin-top: 0; align-items: start; }
+.sobre-marca { max-width: 440px; margin-inline: auto; }
+@media (max-width: 700px) {
+  .sobre-presentacion { grid-row: 1; }
+  .sobre-columna { grid-row: 2; }
+  .sobre-marca { max-width: 320px; }
+}
